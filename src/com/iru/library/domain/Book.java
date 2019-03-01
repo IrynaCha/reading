@@ -5,43 +5,46 @@ import java.util.Objects;
 
 public class Book {
     private Long id;
-    private LocalDate year;
     private String name;
     private String author;
-    private Integer price;
-    private Boolean status;
-    private String edition;
+    private LocalDate year;
     private String genre;
+    private String edition;
+    private Boolean status;
+    private Integer price;
 
     public Book() {
     }
 
-    public Book(Long id, LocalDate year, String name, String author, Integer price, Boolean status, String edition,
-            String genre) {
-        this.id = id;
-        this.year = year;
+    public Book(String name, String author, LocalDate year, String genre, String edition, Boolean status,
+            Integer price) {
         this.name = name;
         this.author = author;
-        this.price = price;
-        this.status = status;
-        this.edition = edition;
+        this.year = year;
         this.genre = genre;
+        this.edition = edition;
+        this.status = status;
+        this.price = price;
     }
 
+    public Book(Long id, String name, String author, LocalDate year, String genre, String edition, Boolean status,
+            Integer price) {
+        this.id = id;
+        this.name = name;
+        this.author = author;
+        this.year = year;
+        this.genre = genre;
+        this.edition = edition;
+        this.status = status;
+        this.price = price;
+    }
+    
     public Long getId() {
         return id;
     }
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public LocalDate getYear() {
-        return year;
-    }
-
-    public void setYear(LocalDate year) {
-        this.year = year;
     }
 
     public String getName() {
@@ -60,20 +63,20 @@ public class Book {
         this.author = author;
     }
 
-    public Integer getPrice() {
-        return price;
+    public LocalDate getYear() {
+        return year;
     }
 
-    public void setPrice(Integer price) {
-        this.price = price;
+    public void setYear(LocalDate year) {
+        this.year = year;
     }
 
-    public Boolean getStatus() {
-        return status;
+    public String getGenre() {
+        return genre;
     }
 
-    public void setStatus(Boolean status) {
-        this.status = status;
+    public void setGenre(String genre) {
+        this.genre = genre;
     }
 
     public String getEdition() {
@@ -84,12 +87,20 @@ public class Book {
         this.edition = edition;
     }
 
-    public String getGenre() {
-        return genre;
+    public Boolean getStatus() {
+        return status;
     }
 
-    public void setGenre(String genre) {
-        this.genre = genre;
+    public void setStatus(Boolean status) {
+        this.status = status;
+    }
+
+    public Integer getPrice() {
+        return price;
+    }
+
+    public void setPrice(Integer price) {
+        this.price = price;
     }
 
     @Override
