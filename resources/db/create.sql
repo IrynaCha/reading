@@ -3,8 +3,8 @@ CREATE TABLE book (
     "name" TEXT NOT NULL,
     author TEXT,
     "year" DATE,
-    edition TEXT,
     genre TEXT,
+    edition TEXT,
     status BOOLEAN NOT NULL,
     price int
 );
